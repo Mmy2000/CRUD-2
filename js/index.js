@@ -35,10 +35,10 @@ function displayProduct() {
                         <div class="inner p-2">
                             <img src="img/post-3.jpg" class="w-100" alt="">
                             <div class="content p-2">
-                                <h2>Sumsung</h2>
-                                <span>2000$</span>
-                                <span class="badge bg-secondary ms-4">Category</span>
-                                <p class="mt-2">Lorem ipsum dolor sit.</p>
+                                <h2>${productsContainer[i].code}</h2>
+                                <span>${productsContainer[i].price}$</span>
+                                <span class="badge bg-secondary ms-4">${productsContainer[i].category}</span>
+                                <p class="mt-2">${productsContainer[i].desc}</p>
                                 <a href="#"  class="btn btn btn-outline-warning">Update</a>
                                 <a href="#"  class="btn btn btn-outline-danger">Delete</a>
                             </div>
