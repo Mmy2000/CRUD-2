@@ -5,6 +5,10 @@ var productDescInput = document.getElementById("productDesc");
 var productImageInput = document.getElementById("productImage");
 var productsContainer = [];
 
+if (localStorage.getItem('products') !== null) {
+    productsContainer =JSON.parse(localStorage.getItem('products'));
+    displayProduct();
+}
 
 function addProduct() {
     var product = {
