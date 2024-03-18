@@ -44,8 +44,8 @@ function displayProduct() {
                                 <span>${productsContainer[i].price}$</span>
                                 <span class="badge bg-secondary ms-4">${productsContainer[i].category}</span>
                                 <p class="mt-2">${productsContainer[i].desc}</p>
-                                <a href="#"  class="btn btn btn-outline-warning">Update</a>
-                                <a href="#" onclick="deleteProduct(${i})"  class="btn btn btn-outline-danger">Delete</a>
+                                <a href="#"  class="btn btn btn-outline-warning w-100 mb-2">Update<i class="fa-solid fa-pen ps-1"></i></a>
+                                <a href="#" onclick="deleteProduct(${i})"  class="btn btn btn-outline-danger w-100">Delete<i class="fa-solid fa-trash-can ps-1"></i></a>
                             </div>
                         </div> 
                     </div>`
