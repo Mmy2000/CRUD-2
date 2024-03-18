@@ -15,6 +15,7 @@ function addProduct() {
         image: 'img/post-3.jpg',
     }
     productsContainer.push(product);
+    localStorage.setItem('products' , JSON.stringify(productsContainer));
     clearForm();
     displayProduct();
 
