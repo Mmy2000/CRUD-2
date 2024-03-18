@@ -45,10 +45,15 @@ function displayProduct() {
                                 <span class="badge bg-secondary ms-4">${productsContainer[i].category}</span>
                                 <p class="mt-2">${productsContainer[i].desc}</p>
                                 <a href="#"  class="btn btn btn-outline-warning">Update</a>
-                                <a href="#"  class="btn btn btn-outline-danger">Delete</a>
+                                <a href="#" onclick="deleteProduct(${i})"  class="btn btn btn-outline-danger">Delete</a>
                             </div>
                         </div> 
                     </div>`
     }
     document.getElementById("rowData").innerHTML = cartoona;
+}
+function deleteProduct(index) {
+    productsContainer.splice(index,1)
+    localStorage.setItem('products' , JSON.stringify(productsContainer));
+    displayProduct();
 }
