@@ -99,7 +99,13 @@ function valedateInputs(element) {
         productName:/^[A-Z][a-z]{2,8}$/,
         productPrice:/^[0-9][0-9]/,
         productDesc:/^.{6}$/,
-        productCat:/^(mobile|tv|labtop)$/,
+        productCategory:/^(mobile|tv|labtop)$/,
+    }
+    if (regex[element.id].test(element.value) == true) {
+        console.log("true")
+    }
+    else{
+        console.log("false");
     }
 
 }

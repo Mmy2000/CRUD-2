@@ -14,17 +14,17 @@
     <div class="container p-5 my-3">
         <div class="row px-5">
             <div class="form-floating mb-3">
-                <input type="text" class="form-control border-0 border-bottom " id="productName"
+                <input type="text" oninput="valedateInputs(this)" class="form-control border-0 border-bottom " id="productName"
                     placeholder="product name">
                 <label for="productName">Product Name</label>
             </div>
             <div class="form-floating mb-3">
-                <input type="number" class="form-control border-0 border-bottom" id="productPrice"
+                <input type="number" oninput="valedateInputs(this)" class="form-control border-0 border-bottom" id="productPrice"
                     placeholder="product price">
                 <label for="productPrice">Product Price</label>
             </div>
             <div class="form-floating mb-3">
-                <input list="list" type="text" class="form-control border-0 border-bottom" id="productCat"
+                <input list="list" oninput="valedateInputs(this)" type="text" class="form-control border-0 border-bottom" id="productCat"
                     placeholder="product category">
                 <label for="productCat">Product Category</label>
                 <datalist id="list">
@@ -34,7 +34,7 @@
                 </datalist>
             </div>
             <div class="form-floating mb-3">
-                <input type="email" class="form-control border-0 border-bottom" id="productDesc"
+                <input type="email" oninput="valedateInputs(this)" class="form-control border-0 border-bottom" id="productDesc"
                     placeholder="product desc">
                 <label for="productDesc">Product Desc</label>
             </div>
