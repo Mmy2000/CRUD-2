@@ -21,7 +21,7 @@ function addProduct() {
         price: productPriceInput.value,
         category: productCategoryInput.value,
         desc: productDescInput.value,
-        image: `img/products/${productImageInput.files[0].name}`,
+        image: `img/products/${productImageInput.files[0]?.name}`,
     }
     productsContainer.push(product);
     localStorage.setItem('products' , JSON.stringify(productsContainer));
