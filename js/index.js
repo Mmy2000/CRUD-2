@@ -94,7 +94,15 @@ function search(q) {
     displayProduct(searchArr);
 }
 
+function valedateInputs(element) {
+    var regex = {
+        productName:/^[A-Z][a-z]{2,8}$/,
+        productPrice:/^[0-9][0-9]/,
+        productDesc:/^.{6}$/,
+        productCat:/^(mobile|tv|labtop)$/,
+    }
 
+}
 // regex for ip
 // const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
 
