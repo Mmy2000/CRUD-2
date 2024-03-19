@@ -63,5 +63,6 @@ function deleteProduct(index) {
 }
 
 function setFormForUpdate() {
-    
+    addBtn.classList.add('d-none')
+    updateBtn.classList.remove('d-none')
 }
