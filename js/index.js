@@ -21,7 +21,7 @@ function addProduct() {
         price: productPriceInput.value,
         category: productCategoryInput.value,
         desc: productDescInput.value,
-        image: 'img/post-3.jpg',
+        image: `img/products/${productImageInput.files[0].name}`,
     }
     productsContainer.push(product);
     localStorage.setItem('products' , JSON.stringify(productsContainer));
@@ -43,7 +43,7 @@ function displayProduct(arr) {
     for (var i = 0; i < arr.length; i++) {
         cartoona += `<div class="col-md-3">
                         <div class="inner p-2">
-                            <img src="img/post-3.jpg" class="w-100" alt="">
+                            <img src="${arr[i].image}" class="w-100" alt="">
                             <div class="content p-2">
                                 <h2>${arr[i].code}</h2>
                                 <span>${arr[i].price}$</span>
