@@ -101,9 +101,7 @@ function valedateInputs(element) {
         productDesc:/^.{6}$/,
         productCategory:/^(mobile|tv|labtop)$/,
     }
-    console.log(regex[element.id]);
-    console.log(element.value);
-    console.log(regex[element.id].test(element.value));
+
     if (regex[element.id].test(element.value) == true) {
         element.classList.add('is-valid')
         element.classList.remove('is-invalid')
