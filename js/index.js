@@ -83,3 +83,12 @@ function update() {
     updateBtn.classList.add('d-none')
     addBtn.classList.remove('d-none')
 }
+function search(q) {
+    var searchArr = [];
+    for (var i = 0; i < productsContainer.length; i++) {
+        if (productsContainer[i].code.toLowerCase().includes(q.toLowerCase())) {
+            searchArr.push(productsContainer[i]);
+        }
+    }
+    displayProduct(searchArr);
+}
