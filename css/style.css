@@ -2,6 +2,6 @@ input:focus{
     box-shadow: none !important;
 }
 .inner img{
-    height: 150px;
+    height: 200px;
     object-fit: contain;
 }
