@@ -6,6 +6,7 @@ var productImageInput = document.getElementById("productImage");
 var addBtn = document.getElementById('addBtn')
 var updateBtn = document.getElementById('updateBtn')
 var productsContainer ;
+var product_id;
 
 if (localStorage.getItem('products') !== null) {
     productsContainer =JSON.parse(localStorage.getItem('products'));
@@ -63,10 +64,22 @@ function deleteProduct(index) {
 }
 
 function setFormForUpdate(index) {
+    product_id = index
     productNameInput.value = productsContainer[index].code
     productPriceInput.value = productsContainer[index].price
     productCategoryInput.value = productsContainer[index].category
     productDescInput.value = productsContainer[index].desc
     addBtn.classList.add('d-none')
     updateBtn.classList.remove('d-none')
+}
+function update() {
+    productsContainer[product_id].code = productNameInput.value;
+    productsContainer[product_id].price = productPriceInput.value;
+    productsContainer[product_id].category = productCategoryInput.value;
+    productsContainer[product_id].desc = productDescInput.value;
+    localStorage.setItem('products' , JSON.stringify(productsContainer));
+    displayProduct(productsContainer)
+    clearForm();
+    updateBtn.classList.add('d-none')
+    addBtn.classList.remove('d-none')
 }
