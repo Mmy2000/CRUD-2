@@ -93,3 +93,12 @@ function search(q) {
     }
     displayProduct(searchArr);
 }
+
+
+// regex for ip
+// const ipv4Regex = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+
+// function isValidIPv4(ip) {
+//   return ipv4Regex.test(ip);
+// }
+
