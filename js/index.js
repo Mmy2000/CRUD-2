@@ -3,6 +3,8 @@ var productPriceInput = document.getElementById("productPrice");
 var productCategoryInput = document.getElementById("productCat");
 var productDescInput = document.getElementById("productDesc");
 var productImageInput = document.getElementById("productImage");
+var addBtn = document.getElementById('addBtn')
+var updateBtn = document.getElementById('updateBtn')
 var productsContainer ;
 
 if (localStorage.getItem('products') !== null) {
@@ -46,7 +48,7 @@ function displayProduct(arr) {
                                 <span>${arr[i].price}$</span>
                                 <span class="badge bg-secondary ms-4">${arr[i].category}</span>
                                 <p class="mt-2">${arr[i].desc}</p>
-                                <a href="#"  class="btn btn btn-outline-warning w-100 mb-2">Update<i class="fa-solid fa-pen ps-1"></i></a>
+                                <a href="#" onclick="setFormForUpdate()" class="btn btn btn-outline-warning w-100 mb-2">Update<i class="fa-solid fa-pen ps-1"></i></a>
                                 <a href="#" onclick="deleteProduct(${i})"  class="btn btn btn-outline-danger w-100">Delete<i class="fa-solid fa-trash-can ps-1"></i></a>
                             </div>
                         </div> 
@@ -58,4 +60,8 @@ function deleteProduct(index) {
     productsContainer.splice(index,1)
     localStorage.setItem('products' , JSON.stringify(productsContainer));
     displayProduct(productsContainer);
+}
+
+function setFormForUpdate() {
+    
 }
