@@ -77,6 +77,7 @@ function update() {
     productsContainer[product_id].price = productPriceInput.value;
     productsContainer[product_id].category = productCategoryInput.value;
     productsContainer[product_id].desc = productDescInput.value;
+    productsContainer[product_id].image = `img/products/${productImageInput.files[0]?.name}`;
     localStorage.setItem('products' , JSON.stringify(productsContainer));
     displayProduct(productsContainer)
     clearForm();
