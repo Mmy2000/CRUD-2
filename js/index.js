@@ -7,7 +7,7 @@ var addBtn = document.getElementById('addBtn')
 var updateBtn = document.getElementById('updateBtn')
 var productsContainer ;
 var product_id;
-
+var alert = document.getElementById('alert');
 if (localStorage.getItem('products') !== null) {
     productsContainer =JSON.parse(localStorage.getItem('products'));
     displayProduct(productsContainer);
@@ -105,11 +105,12 @@ function valedateInputs(element) {
     if (regex[element.id].test(element.value) == true) {
         element.classList.add('is-valid')
         element.classList.remove('is-invalid')
+        alert.classList.replace('d-block','d-none')
     }
     else{
         element.classList.add('is-invalid')
         element.classList.remove('is-valid')
-
+        alert.classList.replace('d-none','d-block')
     }
 
 }
