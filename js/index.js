@@ -105,12 +105,12 @@ function valedateInputs(element) {
     if (regex[element.id].test(element.value) == true) {
         element.classList.add('is-valid')
         element.classList.remove('is-invalid')
-        element.nextElementSipling.classList.replace('d-block','d-none')
+        element.nextElementSibling.classList.replace('d-block','d-none')
     }
     else{
         element.classList.add('is-invalid')
         element.classList.remove('is-valid')
-        element.nextElementSipling.classList.replace('d-none','d-block')
+        element.nextElementSibling.classList.replace('d-none','d-block')
     }
 
 }
