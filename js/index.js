@@ -16,8 +16,7 @@ if (localStorage.getItem('products') !== null) {
 }
 
 function addProduct() {
-    if (valedateInputs() == true) {
-        var product = {
+    var product = {
         code: productNameInput.value,
         price: productPriceInput.value,
         category: productCategoryInput.value,
@@ -28,8 +27,6 @@ function addProduct() {
     localStorage.setItem('products' , JSON.stringify(productsContainer));
     clearForm();
     displayProduct(productsContainer);
-    }
-    
 
 }
 
