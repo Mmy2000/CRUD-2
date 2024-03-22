@@ -16,7 +16,8 @@ if (localStorage.getItem('products') !== null) {
 }
 
 function addProduct() {
-    var product = {
+    if (valedateInputs() == true) {
+        var product = {
         code: productNameInput.value,
         price: productPriceInput.value,
         category: productCategoryInput.value,
@@ -27,6 +28,8 @@ function addProduct() {
     localStorage.setItem('products' , JSON.stringify(productsContainer));
     clearForm();
     displayProduct(productsContainer);
+    }
+    
 
 }
 
@@ -101,18 +104,18 @@ function valedateInputs(element) {
         productDesc:/^.{6}$/,
         productCat:/^(tv|mobile|laptop)$/,
     }
-    console.log(element.value);
-    console.log(regex[element.id]);
-    console.log(regex[element.id].test(element.value));
+
     if (regex[element.id].test(element.value) == true) {
         element.classList.add('is-valid')
         element.classList.remove('is-invalid')
         element.nextElementSibling.classList.replace('d-block','d-none')
+        return true;
     }
     else{
         element.classList.add('is-invalid')
         element.classList.remove('is-valid')
         element.nextElementSibling.classList.replace('d-none','d-block')
+        return false;
     }
 
 }
