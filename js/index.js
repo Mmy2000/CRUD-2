@@ -99,7 +99,7 @@ function valedateInputs(element) {
         productName:/^[A-Z][a-z]{2,8}$/,
         productPrice:/^[0-9][0-9]/,
         productDesc:/^.{6}$/,
-        productCategory:/^[A-Z][a-z]{2,8}$/,
+        productCat:/^[A-Z][a-z]{2,8}$/,
     }
     console.log(element.value);
     console.log(regex[element.id]);
